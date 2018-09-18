@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{D9D43F37-5C8E-4490-B3C5-DB022B01670A}|Default">
   <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageSettings.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageRecents.xaml">
     <Files>
       <File FileName="CityWhispers/App.xaml" Line="4" Column="14" />
       <File FileName="CityWhispers/App.xaml.cs" Line="14" Column="39" />
-      <File FileName="CityWhispers/MainPage.xaml" Line="5" Column="75" />
-      <File FileName="CityWhispers/MainPage.xaml.cs" Line="23" Column="4" />
-      <File FileName="CityWhispers/MainPageRecents.xaml" Line="5" Column="76" />
-      <File FileName="CityWhispers/MainPageRecents.xaml.cs" Line="8" Column="54" />
+      <File FileName="CityWhispers/MainPage.xaml" Line="7" Column="26" />
+      <File FileName="CityWhispers/MainPage.xaml.cs" Line="18" Column="46" />
+      <File FileName="CityWhispers/MainPageMap.xaml" Line="12" Column="40" />
+      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="19" Column="13" />
+      <File FileName="CityWhispers/MainPageRecents.xaml" Line="2" Column="1" />
+      <File FileName="CityWhispers/MainPageRecents.xaml.cs" Line="12" Column="31" />
       <File FileName="CityWhispers/MainPageProfile.xaml" Line="5" Column="76" />
-      <File FileName="CityWhispers/MainPageProfile.xaml.cs" Line="8" Column="54" />
-      <File FileName="CityWhispers/MainPageSettings.xaml" Line="5" Column="15" />
-      <File FileName="CityWhispers/MainPageSettings.xaml.cs" Line="11" Column="9" />
-      <File FileName="CityWhispers/MainPageMap.xaml" Line="6" Column="1" />
-      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="1" Column="1" />
+      <File FileName="CityWhispers/MainPageProfile.xaml.cs" Line="12" Column="31" />
+      <File FileName="CityWhispers/MainPageSettings.xaml" Line="6" Column="31" />
+      <File FileName="CityWhispers/MainPageSettings.xaml.cs" Line="12" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

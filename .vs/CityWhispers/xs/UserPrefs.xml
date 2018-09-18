@@ -1,18 +1,26 @@
-﻿<Properties StartupConfiguration="{4CF5B4BB-96AC-4167-B757-D85EE61523A5}|Default">
-  <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPage.xaml">
+﻿<Properties StartupConfiguration="{D9D43F37-5C8E-4490-B3C5-DB022B01670A}|Default">
+  <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageSettings.xaml">
     <Files>
-      <File FileName="CityWhispers/MainPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="CityWhispers/MainPage.xaml" Line="7" Column="15" />
+      <File FileName="CityWhispers/App.xaml" Line="4" Column="14" />
+      <File FileName="CityWhispers/App.xaml.cs" Line="14" Column="39" />
+      <File FileName="CityWhispers/MainPage.xaml" Line="5" Column="75" />
+      <File FileName="CityWhispers/MainPage.xaml.cs" Line="23" Column="4" />
+      <File FileName="CityWhispers/MainPageRecents.xaml" Line="5" Column="76" />
+      <File FileName="CityWhispers/MainPageRecents.xaml.cs" Line="8" Column="54" />
+      <File FileName="CityWhispers/MainPageProfile.xaml" Line="5" Column="76" />
+      <File FileName="CityWhispers/MainPageProfile.xaml.cs" Line="8" Column="54" />
+      <File FileName="CityWhispers/MainPageSettings.xaml" Line="5" Column="15" />
+      <File FileName="CityWhispers/MainPageSettings.xaml.cs" Line="11" Column="9" />
+      <File FileName="CityWhispers/MainPageMap.xaml" Line="6" Column="1" />
+      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.CityWhispers FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.CityWhispers.UITests FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B85F1BC9-D062-42DC-8D06-B2A7B492AAA0" />
   <MultiItemStartupConfigurations />
 </Properties>

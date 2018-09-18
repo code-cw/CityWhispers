@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CityWhispers" x:Class="CityWhispers.MainPage">
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="CityWhispers.MainPage"
+            xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
+            Title="Map">
+    <local:MainPageMap />
+    <local:MainPageRecents />
+    <local:MainPageProfile />
+    <local:MainPageSettings />
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label Text="Map"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />  
+        <BoxView Color="Blue" VerticalOptions="FillAndExpand" />  
     </StackLayout>
-</ContentPage>
+</TabbedPage>

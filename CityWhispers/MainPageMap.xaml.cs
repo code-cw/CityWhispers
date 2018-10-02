@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+//using Xamarin.Forms.Maps;
 
 using Xamarin.Forms;
 
@@ -7,6 +8,14 @@ namespace CityWhispers
 {
     public partial class MainPageMap : ContentPage
     {
+        //public static Page GetMainPageMap()
+        //{
+        //    return new ContentPage
+        //    {
+        //        Content = new Map(MapSpan.FromCenterAndRadius(new Position(37, -122), Distance.FromMiles(10)))
+        //    };
+        //}
+
         public MainPageMap()
         {
             Label space = new Label

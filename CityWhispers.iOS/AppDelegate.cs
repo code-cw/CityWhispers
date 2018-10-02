@@ -24,9 +24,29 @@ namespace CityWhispers.iOS
         {
             Xamarin.Calabash.Start();
             global::Xamarin.Forms.Forms.Init();
+            //global::Xamarin.FormsMaps.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
     }
+
+    //[Register("AppDelega
+    //public partial class AppDelegate : UIApplicationDelegate
+    //{
+    //    UIWindow window;
+
+    //    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    //    {
+    //        Forms.Init();
+
+
+    //        window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+    //        window.RootViewController = MainPageMap.GetMainPageMap().CreateViewController();
+    //        window.MakeKeyAndVisible();
+
+    //        return true;
+    //    }
+    //}
 }

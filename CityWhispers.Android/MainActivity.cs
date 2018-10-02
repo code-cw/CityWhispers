@@ -22,4 +22,18 @@ namespace CityWhispers.Droid
             LoadApplication(new App());
         }
     }
+
+    //[Activity(Label = "HelloMap.Android.Android", MainLauncher = true)]
+    //public class MainActivity : AndroidActivity
+    //{
+    //    protected override void OnCreate(Bundle bundle)
+    //    {
+    //        base.OnCreate(bundle);
+
+    //        Xamarin.Forms.Forms.Init(this, bundle);
+    //        FormsMaps.Init(this, bundle);
+
+    //        SetPage(MainPageMap.GetMainPageMap());
+    //    }
+    //}
 }

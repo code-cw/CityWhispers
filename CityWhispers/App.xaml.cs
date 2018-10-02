@@ -10,6 +10,8 @@ namespace CityWhispers
         public App()
         {
             InitializeComponent();
+            //FormsMaps.Init("AUTHENTICATION_TOKEN");
+
 
             MainPage = new MainPage();
            

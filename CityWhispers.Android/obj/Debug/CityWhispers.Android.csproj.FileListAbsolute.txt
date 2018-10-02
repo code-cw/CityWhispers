@@ -31,6 +31,8 @@
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/R.cs.flag
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/R.txt
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/uploadflags.txt
+/Users/Aaron/.nuget/packages/xamarin.forms/3.2.0.839982/lib/MonoAndroid10/FormsViewGroup.dll
+/Users/Aaron/.nuget/packages/xamarin.forms/3.2.0.839982/lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/bin/Debug/Mono.Android.pdb
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/bin/Debug/Xamarin.Forms.Core.pdb
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/bin/Debug/Xamarin.Forms.Xaml.pdb

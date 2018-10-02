@@ -1,19 +1,8 @@
 ﻿<Properties StartupConfiguration="{D9D43F37-5C8E-4490-B3C5-DB022B01670A}|Default">
   <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageRecents.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageMap.xaml.cs">
     <Files>
-      <File FileName="CityWhispers/App.xaml" Line="4" Column="14" />
-      <File FileName="CityWhispers/App.xaml.cs" Line="14" Column="39" />
-      <File FileName="CityWhispers/MainPage.xaml" Line="7" Column="26" />
-      <File FileName="CityWhispers/MainPage.xaml.cs" Line="18" Column="46" />
-      <File FileName="CityWhispers/MainPageMap.xaml" Line="12" Column="40" />
-      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="19" Column="13" />
-      <File FileName="CityWhispers/MainPageRecents.xaml" Line="2" Column="1" />
-      <File FileName="CityWhispers/MainPageRecents.xaml.cs" Line="12" Column="31" />
-      <File FileName="CityWhispers/MainPageProfile.xaml" Line="5" Column="76" />
-      <File FileName="CityWhispers/MainPageProfile.xaml.cs" Line="12" Column="31" />
-      <File FileName="CityWhispers/MainPageSettings.xaml" Line="6" Column="31" />
-      <File FileName="CityWhispers/MainPageSettings.xaml.cs" Line="12" Column="32" />
+      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="15" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -21,6 +10,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B85F1BC9-D062-42DC-8D06-B2A7B492AAA0" />
+  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D090B0BB-E1C7-4FC9-8F9A-3C4F837BF5FD" />
   <MultiItemStartupConfigurations />
 </Properties>

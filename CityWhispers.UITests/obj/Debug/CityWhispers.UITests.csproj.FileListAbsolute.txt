@@ -1,8 +1,0 @@
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/bin/Debug/CityWhispers.UITests.dll
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/bin/Debug/CityWhispers.UITests.pdb
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/bin/Debug/nunit.framework.dll
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/bin/Debug/Xamarin.UITest.dll
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/obj/Debug/CityWhispers.UITests.csproj.CoreCompileInputs.cache
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/obj/Debug/CityWhispers.UITests.csproj.CopyComplete
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/obj/Debug/CityWhispers.UITests.dll
-/Users/Aaron/Projects/CityWhispers/CityWhispers.UITests/obj/Debug/CityWhispers.UITests.pdb

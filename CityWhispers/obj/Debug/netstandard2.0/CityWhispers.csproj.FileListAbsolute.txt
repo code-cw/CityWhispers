@@ -13,4 +13,3 @@
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.pdb
-/Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.csprojAssemblyReference.cache

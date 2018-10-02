@@ -1,8 +1,10 @@
-﻿<Properties StartupConfiguration="{D9D43F37-5C8E-4490-B3C5-DB022B01670A}|Default">
+﻿<Properties StartupConfiguration="{4CF5B4BB-96AC-4167-B757-D85EE61523A5}|Default">
   <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageMap.xaml.cs">
     <Files>
-      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="15" Column="36" />
+      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="9" Column="19" />
+      <File FileName="CityWhispers.Android/MainActivity.cs" Line="26" Column="15" />
+      <File FileName="CityWhispers/Models/Maps.cs" Line="24" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

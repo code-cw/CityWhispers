@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms.Maps;
 
 namespace CityWhispers.Droid
 {
@@ -19,6 +20,11 @@ namespace CityWhispers.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            Xamarin.FormsMaps.Init(this, savedInstanceState);
+
+            //SetPage(MainPageMap.GetMainPageMap());
+
             LoadApplication(new App());
         }
     }

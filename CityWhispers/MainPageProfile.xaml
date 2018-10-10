@@ -4,6 +4,9 @@
              x:Class="CityWhispers.MainPageProfile"
              xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
              Title="Profile">
+    <!--<NavigationPage.ToolbarItems>
+        <ToolbarItem Text="New" Clicked="New_Profile" />
+    </NavigationPage.ToolbarItems>-->
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Green"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />  

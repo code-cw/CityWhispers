@@ -10,11 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="3.2.0.839982" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.2.0.871581" />
+    <PackageReference Include="Xamarin.Essentials" Version="0.10.0-preview" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.2-beta" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Recents.cs" />
+    <Compile Remove="MyPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

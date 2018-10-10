@@ -9,8 +9,8 @@ namespace CityWhispers
     {
         public MainPageRecents()
         {
-            Title = "Recents";
             InitializeComponent();
+            Title = "Recents";
         }
     }
 }

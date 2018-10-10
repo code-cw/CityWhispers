@@ -1,17 +1,42 @@
-﻿<Properties StartupConfiguration="{4CF5B4BB-96AC-4167-B757-D85EE61523A5}|Default">
+﻿<Properties StartupConfiguration="{D9D43F37-5C8E-4490-B3C5-DB022B01670A}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageMap.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers.iOS/Main.cs">
     <Files>
-      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="9" Column="19" />
-      <File FileName="CityWhispers.Android/MainActivity.cs" Line="26" Column="15" />
-      <File FileName="CityWhispers/Models/Maps.cs" Line="24" Column="10" />
+      <File FileName="CityWhispers/MainPageMap.xaml" Line="27" Column="1" />
+      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="91" Column="15" />
+      <File FileName="CityWhispers/WhisperLocation.xaml" Line="16" Column="1" />
+      <File FileName="CityWhispers/WhisperLocation.xaml.cs" Line="58" Column="10" />
+      <File FileName="CityWhispers/CreateWhisper.xaml" Line="12" Column="1" />
+      <File FileName="CityWhispers/CreateWhisper.xaml.cs" Line="17" Column="15" />
+      <File FileName="CityWhispers/MainPage.xaml" Line="10" Column="14" />
+      <File FileName="CityWhispers/MainPage.xaml.cs" Line="11" Column="47" />
+      <File FileName="CityWhispers.iOS/Main.cs" Line="17" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CityWhispers" expanded="True">
+            <Node name="CityWhispers" expanded="True">
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="MainPageMap.xaml" expanded="True" />
+            </Node>
+            <Node name="CityWhispers.Android" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="CityWhispers.iOS" expanded="True">
+              <Node name="Main.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D090B0BB-E1C7-4FC9-8F9A-3C4F837BF5FD" />
+  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.700F690C-8650-4852-9FE8-EA78B870FA87" automaticSigning="False" />
   <MultiItemStartupConfigurations />
 </Properties>

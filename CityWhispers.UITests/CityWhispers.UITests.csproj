@@ -28,10 +28,16 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
     <PackageReference Include="Xamarin.UITest" Version="2.2.6" />
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>3.2.0.839982</Version>
+      <Version>3.2.0.871581</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>0.10.0-preview</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Geolocator">
+      <Version>4.5.2-beta</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

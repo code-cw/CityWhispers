@@ -12,31 +12,17 @@ namespace CityWhispers
     {
         public MainPage()
         {
-			var MapPage = new MainPageMap();
-			var RecentsPage = new MainPageRecents();         
-			var ProfilePage = new MainPageProfile();
-			var SettingsPage = new MainPageSettings();
+            InitializeComponent();
 
-			Children.Add(MapPage);
-			Children.Add(RecentsPage);
-            Children.Add(ProfilePage);
-            Children.Add(SettingsPage);
+            //var MapPage = new NavigationPage(new MainPageMap());
+            //var RecentsPage = new MainPageRecents();         
+            //var ProfilePage = new MainPageProfile();
+            //var SettingsPage = new MainPageSettings();
 
-
-            //Title = "Map";
-            //ItemsSource = new string[]{
-            //    "Map",
-            //    "Recents",
-            //    "Profile",
-            //    "Settings"
-            //};
-            //ItemsSource = new NamedColors[]
-            //{
-            //    new NamedColors("Map"),
-            //    new NamedColors("Recentd"),
-            //    new NamedColors("Profile"),
-            //    new NamedColors("Settings")
-            //};
+            //Children.Add(MapPage);
+            //Children.Add(RecentsPage);
+            //Children.Add(ProfilePage);
+            //Children.Add(SettingsPage);
         }
     }
 }

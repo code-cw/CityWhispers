@@ -4,6 +4,7 @@
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/bin/Debug/com.companyname.City_Whispers-Signed.apk
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/bin/Debug/CityWhispers.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/bin/Debug/CityWhispers.pdb
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/CityWhispers.Android.csprojAssemblyReference.cache
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Basement.dll.stamp
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Tasks.dll.stamp
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Base.dll.stamp

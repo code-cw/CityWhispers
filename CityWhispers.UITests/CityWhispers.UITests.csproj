@@ -39,6 +39,9 @@
     <PackageReference Include="Xam.Plugin.Geolocator">
       <Version>4.5.2-beta</Version>
     </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CityWhispers.iOS\CityWhispers.iOS.csproj">

@@ -158,6 +158,11 @@
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll
 -r=/Users/Aaron/.nuget/packages/plugin.permissions/4.0.1-beta/lib/xamarinios10/Plugin.Permissions.dll
+-r=/Users/Aaron/.nuget/packages/sqlite-net-pcl/1.5.231/lib/netstandard1.1/SQLite-net.dll
+-r=/Users/Aaron/.nuget/packages/sqlitepclraw.bundle_green/1.1.11/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll
+-r=/Users/Aaron/.nuget/packages/sqlitepclraw.bundle_green/1.1.11/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll
+-r=/Users/Aaron/.nuget/packages/sqlitepclraw.core/1.1.11/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll
+-r=/Users/Aaron/.nuget/packages/sqlitepclraw.provider.sqlite3.ios_unified/1.1.11/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll
 -r=/Users/Aaron/.nuget/packages/xam.plugin.geolocator/4.5.2-beta/lib/xamarinios10/Plugin.Geolocator.dll
 -r=/Users/Aaron/.nuget/packages/xamarin.essentials/0.10.0-preview/lib/xamarinios10/Xamarin.Essentials.dll
 -r=/Users/Aaron/.nuget/packages/xamarin.forms/3.2.0.871581/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll

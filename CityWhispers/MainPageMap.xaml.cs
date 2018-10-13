@@ -16,9 +16,6 @@ namespace CityWhispers
         Position currentLocation = new Position();
         IGeolocator locator = CrossGeolocator.Current;
 
-        //public event PropertyChangedEventHandler PropertyChanged;
-        //double lat;
-
         public MainPageMap()
         {
             InitializeComponent();
@@ -39,51 +36,6 @@ namespace CityWhispers
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
 
-            //Label Lat = new Label{};
-            //Label Long = new Label{};
-
-
-            // You can use MapSpan.FromCenterAndRadius 
-            //map.MoveToRegion (MapSpan.FromCenterAndRadius (new Position (37, -122), Distance.FromMiles (0.3)));
-            // or create a new MapSpan object directly
-
-            //var request = new GeolocationRequest(GeolocationAccuracy.Best);
-            //var location = await Geolocation.GetLocationAsync(request);
-
-            //Update_Location();
-
-            //var currentLocation = new Position(latitude: location.Latitude, longitude: location.Longitude);
-            //var radius = new Distance(meters: 50);
-
-            //map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, radius));
-
-            // add the slider
-            //var slider = new Slider(1, 18, 1);
-            //slider.ValueChanged += (sender, e) => {
-            //    var zoomLevel = e.NewValue; // between 1 and 18
-            //    var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
-            //    Debug.WriteLine(zoomLevel + " -> " + latlongdegrees);
-            //    if (map.VisibleRegion != null)
-            //        map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
-            //};
-
-
-            // create map style buttons
-            //var street = new Button { Text = "Street" };
-            //var hybrid = new Button { Text = "Hybrid" };
-            //var satellite = new Button { Text = "Satellite" };
-            //street.Clicked += HandleClicked;
-            //hybrid.Clicked += HandleClicked;
-            //satellite.Clicked += HandleClicked;
-            //var segments = new StackLayout
-            //{
-            //    Spacing = 30,
-            //    HorizontalOptions = LayoutOptions.CenterAndExpand,
-            //    Orientation = StackOrientation.Horizontal,
-            //    Children = { street, hybrid, satellite }
-            //};
-
-
             // put the page together
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
@@ -92,14 +44,6 @@ namespace CityWhispers
             //stack.Children.Add(slider);
             //stack.Children.Add(segments);
             Content = stack;
-
-
-            // for debugging output only
-            //map.PropertyChanged += (sender, e) => {
-            //    Debug.WriteLine(e.PropertyName + " just changed!");
-            //    if (e.PropertyName == "VisibleRegion" && map.VisibleRegion != null)
-            //        CalculateBoundingCoordinates(map.VisibleRegion);
-            //};
         }
 
         ~MainPageMap(){
@@ -141,43 +85,16 @@ namespace CityWhispers
         //    }
         //}
 
-        //static void CalculateBoundingCoordinates(MapSpan region)
-        //{
-        //    // WARNING: I haven't tested the correctness of this exhaustively!
-        //    var center = region.Center;
-        //    var halfheightDegrees = region.LatitudeDegrees / 2;
-        //    var halfwidthDegrees = region.LongitudeDegrees / 2;
-
-        //    var left = center.Longitude - halfwidthDegrees;
-        //    var right = center.Longitude + halfwidthDegrees;
-        //    var top = center.Latitude + halfheightDegrees;
-        //    var bottom = center.Latitude - halfheightDegrees;
-
-        //    // Adjust for Internation Date Line (+/- 180 degrees longitude)
-        //    if (left < -180) left = 180 + (180 + left);
-        //    if (right > 180) right = (right - 180) - 180;
-        //    // I don't wrap around north or south; I don't think the map control allows this anyway
-
-        //    Debug.WriteLine("Bounding box:");
-        //    Debug.WriteLine("                    " + top);
-        //    Debug.WriteLine("  " + left + "                " + right);
-        //    Debug.WriteLine("                    " + bottom);
-        //}
-
         async void Add_Whisper(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new CreateWhisper());
+            await Navigation.PushAsync(new CreateWhisper
+            {
+                BindingContext = new Whisper()
+            });
         }
 
         async void Get_Location()
         {
-            //var request = new GeolocationRequest(GeolocationAccuracy.Best);
-            //var location = await Geolocation.GetLocationAsync(request);
-
-            //var currentLocation = new Position(latitude: location.Latitude, longitude: location.Longitude);
-            //var radius = new Distance(meters: 50);
-
-            //map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, radius));
             var location = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
 
             currentLocation = new Position(latitude: location.Latitude, longitude: location.Longitude);
@@ -185,63 +102,7 @@ namespace CityWhispers
 
             map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, radius));
         }
-
-        //async void Relocate(object sender, System.EventArgs e)
-        //{
-        //    //var request = new GeolocationRequest(GeolocationAccuracy.Best);
-        //    //var location = await Geolocation.GetLocationAsync(request);
-
-        //    //var currentLocation = new Position(latitude: location.Latitude, longitude: location.Longitude);
-        //    //var radius = new Distance(meters: 50);
-
-        //    //map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, radius));
-
-        //    var locator = CrossGeolocator.Current;
-        //    var location = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
-
-        //    currentLocation = new Position(latitude: location.Latitude, longitude: location.Longitude);
-        //    var radius = new Distance(meters: 50);
-
-        //    map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, radius));
-        //}
     }
-
-    //void HandleClicked(object sender, EventArgs e)
-    //{
-    //    var b = sender as Button;
-    //    switch (b.Text)
-    //    {
-    //        case "Street":
-    //            map.MapType = MapType.Street;
-    //            break;
-    //        case "Hybrid":
-    //            map.MapType = MapType.Hybrid;
-    //            break;
-    //        case "Satellite":
-    //            map.MapType = MapType.Satellite;
-    //            break;
-    //    }
-    //}
-
-    //public partial class MainPageMap : ContentPage
-    //{
-    //    public MainPageMap()
-    //    {
-    //    var map = new Map(
-    //        MapSpan.FromCenterAndRadius(
-    //                new Position(37, -122), Distance.FromMiles(0.3)))
-    //    {
-    //        IsShowingUser = true,
-    //        HeightRequest = 100,
-    //        WidthRequest = 960,
-    //        VerticalOptions = LayoutOptions.FillAndExpand
-    //    };
-    //    var stack = new StackLayout { Spacing = 0 };
-    //    stack.Children.Add(map);
-    //    Content = stack;
-    //    }
-
-
     ////public static Page GetMainPageMap()
     ////{
     ////    return new ContentPage

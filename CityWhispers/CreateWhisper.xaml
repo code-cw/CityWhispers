@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CityWhispers.CreateWhisper">
     <NavigationPage.ToolbarItems>
-        <ToolbarItem Text="Cancel"
-                     Clicked="Back_to_Choose_Location" />
+        <ToolbarItem Text="Whisper!"
+                     Clicked="Send_Whisper" />
     </NavigationPage.ToolbarItems>
-    <!--<ContentPage.Content>
-    </ContentPage.Content>-->
+    <ContentPage.Content>
+        <!--<ScrollView>-->
+            <Grid x:Name="grid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="0.03*" />
+                    <RowDefinition Height="2.97*" />
+                </Grid.RowDefinitions>
+            </Grid>
+        <!--</ScrollView>-->
+    </ContentPage.Content>
 </ContentPage>

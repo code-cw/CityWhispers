@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CityWhispers.MainPageMap">
     <NavigationPage.ToolbarItems>
-        <ToolbarItem Name="NewWhisper"
-                     Text="New Whisper!"
+        <ToolbarItem Name="AddWhisper"
+                     Text="+"
                      Priority="1"
                      Clicked="Add_Whisper" />
         <!--<ToolbarItem Text="Locate"
@@ -12,12 +12,12 @@
                      Clicked="Relocate" />-->
     </NavigationPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Label x:Name="Lat" 
                    Text="{Binding Source=lat}" />
             <Label x:Name="Long"
                    Text="{Binding Source=lon}"/>
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
     <!--<NavigationPage.ToolbarItems>
         <ToolbarItem Text="Done" Clicked="Create_Whisper" />

@@ -25,10 +25,11 @@ namespace CityWhispers
             return database.QueryAsync<Whisper>("SELECT * FROM [Whisper] WHERE [Anonymous] = 0");
         }
 
-        //public Task<List<Whisper>> GetWhispersNearby(double latitude, double longitude)
-        //{
-        //    return database.QueryAsync<Whisper>("SELECT * FROM [Whisper] WHERE ");
-        //}
+        public Task<List<Whisper>> GetWhispersNearby(double latitude, double longitude)
+        {
+            return database.QueryAsync<Whisper>("SELECT * FROM [Whisper] WHERE [DISATANCE([WHISPER.LATITUDE]," +
+                                                "[WHISPER.LONGITUDE], [LATITUDE], [LONGITUDE])] < 25");
+        }
 
         public Task<Whisper> GetWhisperAsync(int id)
         {

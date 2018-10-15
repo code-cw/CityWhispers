@@ -8,9 +8,5 @@
         <ToolbarItem Text="New" Clicked="New_Profile" />
     </NavigationPage.ToolbarItems>-->
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Green"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />  
-            <BoxView Color="Green" VerticalOptions="FillAndExpand" />  
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -13,7 +13,7 @@ namespace CityWhispers
         public MainPage()
         {
             InitializeComponent();
-
+            
             //var MapPage = new NavigationPage(new MainPageMap());
             //var RecentsPage = new MainPageRecents();         
             //var ProfilePage = new MainPageProfile();

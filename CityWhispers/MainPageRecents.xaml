@@ -5,7 +5,5 @@
              xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
              Title="Recents">
     <ContentPage.Content>
-        <StackLayout>
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

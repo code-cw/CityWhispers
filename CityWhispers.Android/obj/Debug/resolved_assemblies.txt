@@ -7,6 +7,12 @@
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/Plugin.CurrentActivity.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/Plugin.Geolocator.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/Plugin.Permissions.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/SQLite-net.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_green.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_v2.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/SQLitePCLRaw.core.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/SQLitePCLRaw.lib.e_sqlite3.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/SQLitePCLRaw.provider.e_sqlite3.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.Core.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.Numerics.dll
@@ -75,4 +81,6 @@
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.Runtime.InteropServices.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.Runtime.Extensions.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.Reflection.Extensions.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.Threading.Tasks.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/System.Globalization.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Debug/android/assets/Mono.Security.dll

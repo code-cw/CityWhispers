@@ -5,9 +5,5 @@
              xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
              Title="Settings">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Green"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />  
-            <BoxView Color="Green" VerticalOptions="FillAndExpand" />  
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

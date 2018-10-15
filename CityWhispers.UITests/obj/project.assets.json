@@ -1276,12 +1276,6 @@
         }
       }
     },
-    "dependencies": {
-      "sqlite-net-pcl": {
-        "target": "Package",
-        "version": "[1.5.231, )"
-      }
-    },
     "frameworks": {
       "net47": {
         "dependencies": {
@@ -1304,6 +1298,10 @@
           "Xam.Plugin.Geolocator": {
             "target": "Package",
             "version": "4.5.2-beta"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "1.5.231"
           }
         }
       }

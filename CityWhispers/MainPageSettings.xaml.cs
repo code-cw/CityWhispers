@@ -9,8 +9,8 @@ namespace CityWhispers
     {
         public MainPageSettings()
         {
-            Title = "Settings";
             InitializeComponent();
+            Title = "Settings";
         }
     }
 }

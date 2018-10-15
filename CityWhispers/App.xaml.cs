@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,12 +27,14 @@ namespace CityWhispers
                 if(database == null)
                 {
                     database = new
-                        WhisperDatabase(dbPath.Combine(Environment.GetFolderPath(
+                        WhisperDatabase(Path.Combine(Environment.GetFolderPath(
                             Environment.SpecialFolder.LocalApplicationData), "Whispers.db3"));
                 }
                 return database;
             }
         }
+
+        public int ResumeAtWhisperId { get; set; }
 
         protected override void OnStart()
         {

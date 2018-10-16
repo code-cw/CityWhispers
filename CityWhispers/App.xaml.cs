@@ -11,8 +11,7 @@ namespace CityWhispers
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
-           
+            MainPage = new CityWhispers.Pages.LoginPage();
         }
 
         protected override void OnStart()

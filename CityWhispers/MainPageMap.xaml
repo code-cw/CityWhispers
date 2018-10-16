@@ -6,7 +6,7 @@
         <ToolbarItem Name="AddWhisper"
                      Text="+"
                      Priority="1"
-                     Clicked="Add_Whisper" />
+                     Clicked="To_Add_Whisper" />
         <!--<ToolbarItem Text="Locate"
                      Priority="0"
                      Clicked="Relocate" />-->

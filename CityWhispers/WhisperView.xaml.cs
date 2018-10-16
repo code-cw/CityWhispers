@@ -9,9 +9,13 @@ namespace CityWhispers
 {
     public partial class WhisperView : ContentPage
     {
+        Whisper gWhisper;
+
         public WhisperView(Whisper whisper)
         {
             InitializeComponent();
+
+            gWhisper = whisper;
 
             var whisper_Location = new Position(whisper.Latitude, whisper.Longitude);
 
@@ -56,6 +60,14 @@ namespace CityWhispers
             grid.Children.Add(whisperAddress, 0, 0);
             grid.Children.Add(whisperText, 0, 2);
             Content = grid;
+        }
+
+        async void Delete_Whisper(object sender, System.EventArgs e)
+        {
+
+            await App.Database.DeleteWhisperAsync(gWhisper);
+
+            await Navigation.PopAsync();
         }
 
         //async void Get_Address(Position location, Label Address)

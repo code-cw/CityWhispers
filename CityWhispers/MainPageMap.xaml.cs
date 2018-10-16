@@ -37,21 +37,6 @@ namespace CityWhispers
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
 
-            //var testPin = new Pin
-            //{
-            //    Position = new Position(-27.4821 + 0.0001, 153.034 + 0.0001),
-            //    Label = "ko"
-            //};
-            //testPin.SetBinding(Pin.PositionProperty, "currentLocation");
-            //map.Pins.Add(testPin);
-            //testPin.Clicked += OnPinClicked;
-            //testPin.Clicked += (object sender, EventArgs e) =>
-            //{
-            //    var p = sender as Pin;
-            //    OnPinClicked(sender, e);
-            //    DisplayAlert("Whisper", "Whisper Text", "Back");
-            //};
-
             // put the page together
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
@@ -67,25 +52,40 @@ namespace CityWhispers
         {
             var location = e.Position;
             currentLocation = new Position(latitude: location.Latitude, longitude: location.Longitude);
+
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, Distance.FromMeters(50)));
+            await UpdatePins();
+
+        }
+
+        private async System.Threading.Tasks.Task UpdatePins()
+        {
             var whispersNearby = await App.Database.GetWhispersAsync();
-            foreach(var whisper in whispersNearby)
+            map.Pins.Clear();
+            foreach (var whisper in whispersNearby)
             {
-                if(distanceLocations(whisper.Latitude, whisper.Longitude, currentLocation.Latitude, currentLocation.Longitude) <= 25)
+                var distance = DistanceLocations(whisper.Latitude, whisper.Longitude,currentLocation.Latitude,
+                                                 currentLocation.Longitude);
+                if (distance <= 25)
                 {
                     var whisperPin = new Pin
                     {
                         Position = new Position(whisper.Latitude, whisper.Longitude),
-                        Label = whisper.TimeStamp.ToShortTimeString()
+                        Label = whisper.TimeStamp.ToShortDateString() + "  " + whisper.TimeStamp.ToShortTimeString(),
+                        Address = whisper.Author
                     };
+
+                    whisperPin.Clicked += delegate(object sender, EventArgs e)
+                    { 
+                        OnPinClicked(sender, e, whisper);
+                    };
+
                     map.Pins.Add(whisperPin);
-                    whisperPin.Clicked += OnPinClicked;
                 }
             }
-
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, Distance.FromMeters(50)));
         }
 
-        async void Add_Whisper(object sender, System.EventArgs e)
+        async void To_Add_Whisper(object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new CreateWhisper
             {
@@ -100,21 +100,34 @@ namespace CityWhispers
             currentLocation = new Position(latitude: Location.Latitude, longitude: Location.Longitude);
         }
 
-        async void OnPinClicked(object sender, EventArgs e)
+        async void OnPinClicked(object sender, EventArgs e, Whisper whisper)
         {
-            await DisplayAlert("Whisper", "Here the Whisper text will be dislayed", "Back");
+            //Pin whisperPin = (Pin)sender;
+            await DisplayAlert(whisper.TimeStamp.ToShortDateString() + "  " + whisper.TimeStamp.ToShortTimeString() +
+                               "\n" + whisper.Author, whisper.Text, "Back");
             //await Navigation.PushAsync(new WhisperView());
         }
 
-        public double distanceLocations(double lat1, double lon1, double lat2, double lon2)
+        public double DistanceLocations(double lat1, double lon1, double lat2, double lon2)
         {
-            double theta = lon1 - lon2;
-            double dist = Math.Sin(Deg2rad(lat1)) * Math.Sin(Deg2rad(lat2)) + Math.Cos(Deg2rad(lat1)) * Math.Cos(Deg2rad(lat2)) * Math.Cos(Deg2rad(theta));
-            dist = Math.Acos(dist);
-            dist = Rad2deg(dist);
-            dist = dist * 1609.344;
+            //double theta = lon1 - lon2;
+            //double dist = Math.Sin(Deg2rad(lat1)) * Math.Sin(Deg2rad(lat2)) + Math.Cos(Deg2rad(lat1)) * Math.Cos(Deg2rad(lat2)) * Math.Cos(Deg2rad(theta));
+            //dist = Math.Acos(dist);
+            //dist = Rad2deg(dist);
+            //dist = dist * 1609.344;
 
-            return (dist);
+            //return (dist);
+            double phi = lat2 - lat1;
+            double lambda = lon2 - lon1;
+            double phi_rad = Deg2rad(phi);
+            double lambda_rad = Deg2rad(lambda);
+
+            double a = Math.Sin(phi_rad / 2) * Math.Sin(phi_rad / 2) + Math.Cos(lat1) *
+                           Math.Cos(lat2) * Math.Sin(lambda_rad / 2) * Math.Sin(lambda_rad / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            double d = 6371000 * c;
+
+            return d;
         }
 
         public double Deg2rad(double deg)

@@ -95,11 +95,10 @@ namespace CityWhispers
             whisper.Longitude = whisper_Location.Longitude;
             whisper.Address = whisperAddress.Text;
             whisper.TimeStamp = DateTime.Now;
-            whisper.Author = "me@hello.com";
+            whisper.Author = whisper.Anonymous ? "Anonymous" : "me@hello.com";
 
             await App.Database.SaveWhisperAsync(whisper);
 
-            //await Navigation.PopAsync();
             await Navigation.PopToRootAsync();
         }
 

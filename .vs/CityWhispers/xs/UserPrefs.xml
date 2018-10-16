@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{D9D43F37-5C8E-4490-B3C5-DB022B01670A}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.google_pixel" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageMap.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/Models/Whisper.cs">
     <Files>
       <File FileName="CityWhispers/CreateWhisper.xaml" Line="26" Column="1" />
       <File FileName="CityWhispers/CreateWhisper.xaml.cs" Line="44" Column="73" />
@@ -8,8 +8,9 @@
       <File FileName="CityWhispers/MainPageRecents.xaml.cs" Line="56" Column="73" />
       <File FileName="CityWhispers/WhisperView.xaml" Line="21" Column="1" />
       <File FileName="CityWhispers/WhisperView.xaml.cs" Line="16" Column="86" />
-      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="78" Column="70" />
-      <File FileName="CityWhispers/Data/WhisperDatabase.cs" Line="65" Column="10" />
+      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="106" Column="15" />
+      <File FileName="CityWhispers/Data/WhisperDatabase.cs" Line="4" Column="14" />
+      <File FileName="CityWhispers/Models/Whisper.cs" Line="16" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

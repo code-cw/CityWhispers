@@ -108,6 +108,13 @@ namespace CityWhispers
             //await Navigation.PushAsync(new WhisperView());
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await UpdatePins();
+        }
+
         public double DistanceLocations(double lat1, double lon1, double lat2, double lon2)
         {
             //double theta = lon1 - lon2;

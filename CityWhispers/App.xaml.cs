@@ -11,14 +11,30 @@ namespace CityWhispers
     {
         static WhisperDatabase database;
 
+        private static System.Timers.Timer LifetimeTimer;
+
         public App()
         {
             InitializeComponent();
             //FormsMaps.Init("AUTHENTICATION_TOKEN");
+            SetTimer();
 
 
             MainPage = new NavigationPage(new MainPage());
            
+        }
+
+        private static void SetTimer()
+        {
+            LifetimeTimer = new System.Timers.Timer(20000);
+            LifetimeTimer.Elapsed += DeleteExpiredWhispers;
+            LifetimeTimer.AutoReset = true;
+            LifetimeTimer.Enabled = true;
+        }
+
+        private static void DeleteExpiredWhispers(Object source, EventArgs e)
+        {
+            Database.DeleteExpiredWhispersAsync();
         }
 
         public static WhisperDatabase Database

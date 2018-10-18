@@ -95,6 +95,7 @@ namespace CityWhispers
             whisper.Longitude = whisper_Location.Longitude;
             whisper.Address = whisperAddress.Text;
             whisper.TimeStamp = DateTime.Now;
+            whisper.TimeStampInt = (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalHours;
             whisper.Author = whisper.Anonymous ? "Anonymous" : "me@hello.com";
 
             await App.Database.SaveWhisperAsync(whisper);

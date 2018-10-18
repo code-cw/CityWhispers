@@ -19,6 +19,7 @@ namespace CityWhispers
 
             list = new ListView
             {
+                IsPullToRefreshEnabled = true,
                 Margin = new Thickness(20),
                 ItemTemplate = new DataTemplate(() =>
                 {
@@ -72,6 +73,11 @@ namespace CityWhispers
                 })
             };
 
+            list.RefreshCommand = new Command(() => {
+                RefreshList();
+                list.IsRefreshing = false;
+            });
+
             list.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem != null)
@@ -90,7 +96,17 @@ namespace CityWhispers
         {
             base.OnAppearing();
 
+            App.Database.DeleteExpiredWhispersAsync();
+
             // Reset the 'resume' id, since we just want to re-start here
+            ((App)App.Current).ResumeAtWhisperId = -1;
+            list.ItemsSource = await App.Database.GetWhispersAsync();
+        }
+
+        protected async void RefreshList()
+        {
+            App.Database.DeleteExpiredWhispersAsync();
+
             ((App)App.Current).ResumeAtWhisperId = -1;
             list.ItemsSource = await App.Database.GetWhispersAsync();
         }

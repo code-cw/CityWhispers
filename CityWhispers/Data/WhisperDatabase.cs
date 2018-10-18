@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System;
 using SQLite;
 
+
 namespace CityWhispers
 {
     public class WhisperDatabase
@@ -20,16 +21,28 @@ namespace CityWhispers
             return database.Table<Whisper>().ToListAsync();
         }
 
-        public Task<List<Whisper>> GetWhispersNotAnonymousAsync()
+        //public Task<List<Whisper>> GetWhispersNotAnonymousAsync()
+        //{
+        //    return database.QueryAsync<Whisper>("SELECT * FROM [Whisper] WHERE [Anonymous] = 0");
+        //}
+
+        public async void DeleteExpiredWhispersAsync()
         {
-            return database.QueryAsync<Whisper>("SELECT * FROM [Whisper] WHERE [Anonymous] = 0");
+            var whispers = await GetWhispersAsync();
+            foreach(var whisper in whispers)
+            {
+                int now = (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalHours;
+                if (whisper.TimeStampInt + 120 <= now){
+                    await DeleteWhisperAsync(whisper);
+                }
+            }
         }
 
-        public Task<List<Whisper>> GetWhispersNearby(double latitude, double longitude)
-        {
-            return database.QueryAsync<Whisper>("SELECT * FROM [Whisper] WHERE [DISATANCE([WHISPER.LATITUDE]," +
-                                                "[WHISPER.LONGITUDE], [LATITUDE], [LONGITUDE])] < 25");
-        }
+        //public Task<List<Whisper>> GetWhispersNearby(double latitude, double longitude)
+        //{
+        //    return database.QueryAsync<Whisper>("SELECT * FROM [Whisper] WHERE [DISATANCE([WHISPER.LATITUDE]," +
+        //                                        "[WHISPER.LONGITUDE], [LATITUDE], [LONGITUDE])] < 25");
+        //}
 
         public Task<Whisper> GetWhisperAsync(int id)
         {
@@ -51,27 +64,6 @@ namespace CityWhispers
         public Task<int> DeleteWhisperAsync(Whisper item)
         {
             return database.DeleteAsync(item);
-        }
-
-        public double Distance(double lat1, double lon1, double lat2, double lon2)
-        {
-            double theta = lon1 - lon2;
-            double dist = Math.Sin(Deg2rad(lat1)) * Math.Sin(Deg2rad(lat2)) + Math.Cos(Deg2rad(lat1)) * Math.Cos(Deg2rad(lat2)) * Math.Cos(Deg2rad(theta));
-            dist = Math.Acos(dist);
-            dist = Rad2deg(dist);
-            dist = dist * 1609.344;
-
-            return (dist);
-        }
-
-        public double Deg2rad(double deg)
-        {
-            return (deg * Math.PI / 180.0);
-        }
-
-        public double Rad2deg(double rad)
-        {
-            return (rad / Math.PI * 180.0);
         }
     }
 }

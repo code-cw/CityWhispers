@@ -8,7 +8,6 @@
 /Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.core.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.provider.sqlite3.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/bin/iPhoneSimulator/Debug/Plugin.Geolocator.dll
-/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
 /Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CityWhispers.MainPageSettings"
              xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
-             Title="Settings">
+             Title="Settings"
+             Icon="Icons/settings@3x.png">
     <ContentPage.Content>
     </ContentPage.Content>
 </ContentPage>

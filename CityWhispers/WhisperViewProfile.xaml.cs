@@ -4,14 +4,15 @@ using Xamarin.Forms.Maps;
 using Position = Xamarin.Forms.Maps.Position;
 
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace CityWhispers
 {
-    public partial class WhisperView : ContentPage
+    public partial class WhisperViewProfile : ContentPage
     {
         Whisper gWhisper;
 
-        public WhisperView(Whisper whisper)
+        public WhisperViewProfile(Whisper whisper)
         {
             InitializeComponent();
 
@@ -20,7 +21,7 @@ namespace CityWhispers
             var whisper_Location = new Position(whisper.Latitude, whisper.Longitude);
 
             Map map;
-            map = new Map(MapSpan.FromCenterAndRadius(whisper_Location, Distance.FromMeters(50)))
+            map = new Map()
             {
                 MapType = MapType.Street,
                 HasZoomEnabled = false,
@@ -30,7 +31,6 @@ namespace CityWhispers
                 WidthRequest = 960,
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
-
             Label whisperAddress = new Label
             {
                 Margin = new Thickness(10),
@@ -56,10 +56,13 @@ namespace CityWhispers
             };
             whisperText.SetBinding(Label.TextProperty, "Text");
 
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(whisper_Location, Distance.FromMeters(50)));
+            Task.Delay(1000);
             grid.Children.Add(map, 0, 0);
             grid.Children.Add(whisperAddress, 0, 0);
             grid.Children.Add(whisperText, 0, 2);
             Content = grid;
+
         }
 
         async void Delete_Whisper(object sender, System.EventArgs e)

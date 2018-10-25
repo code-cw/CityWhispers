@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CityWhispers"
+             x:Class="CityWhispers.RegistrationPage">
+    <NavigationPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up"
+                     Clicked="SignUp"/> 
+    </NavigationPage.ToolbarItems>
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="FirstName" Placeholder="First Name (optional)"></Entry>
+            <Entry x:Name="LastName" Placeholder="Last Name (optional"></Entry>
+        </StackLayout>
+        <Entry x:Name="Username" Placeholder="Username"></Entry>
+        <Entry x:Name="Email" Placeholder="Email" Keyboard="Email"></Entry>
+        <Entry x:Name="Password" Placeholder="Password" IsPassword="True"></Entry>
+        <Entry x:Name="ConfirmPassword" Placeholder="Confirm Password" IsPassword="True"></Entry>
+        <Label Text="Date Of Birth"></Label>
+        <DatePicker x:Name="Birthday"></DatePicker>
+        <Label x:Name="Address" Text="Address (optional)"></Label>
+        <Editor Placeholder="Address"></Editor>
+        <!--<Label Text="Already have account? Sign In" TextColor="Blue"></Label>-->
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CityWhispers.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+            <BoxView HeightRequest="10"/>
+            <Frame BackgroundColor="White" HasShadow="False">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
+                           HeightRequest="40"   
+                           Keyboard="Email"  
+                           TextColor="Black"/>
+                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                           HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Save Password"></Label>
+                <Switch x:Name="SavePassword" IsToggled="False"></Switch>
+            </StackLayout>
+            <Button Text="Login" Clicked="LogIn"
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+    <NavigationPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up"
+                     Clicked="ToSignUp" />
+    </NavigationPage.ToolbarItems>
+</ContentPage>

@@ -10,7 +10,6 @@ using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Maps;
-using Xamarin.Essentials;
 using Plugin.CurrentActivity;
 
 namespace CityWhispers.Droid
@@ -25,7 +24,7 @@ namespace CityWhispers.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            global::Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            //global::Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
 
             //string[] PermissionsLocation =

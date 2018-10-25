@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("CityWhispers.WhisperLocation.xaml", "WhisperLocation.xaml", typeof(global::CityWhispers.WhisperLocation))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("CityWhispers.MyPage.xaml", "MyPage.xaml", typeof(global::CityWhispers.MyPage))]
 
 namespace CityWhispers {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("WhisperLocation.xaml")]
-    public partial class WhisperLocation : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("MyPage.xaml")]
+    public partial class MyPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WhisperLocation));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MyPage));
         }
     }
 }

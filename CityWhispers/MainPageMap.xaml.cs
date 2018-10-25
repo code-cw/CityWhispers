@@ -15,15 +15,16 @@ namespace CityWhispers
         Map map;
         IGeolocator locator = CrossGeolocator.Current;
         Position currentLocation;
+        //private static System.Timers.Timer UpdateMapTimer;
 
         public MainPageMap()
         {
             InitializeComponent();
             Title = "Map";
 
-            //Get_Location();
+            //SetTimer();
 
-            locator.StartListeningAsync(TimeSpan.MaxValue, 1.0);
+            locator.StartListeningAsync(TimeSpan.FromSeconds(3), 1.0);
             locator.PositionChanged += Locator_PositionChanged;
 
             map = new Map(MapSpan.FromCenterAndRadius(currentLocation, Distance.FromMeters(50)))
@@ -48,6 +49,7 @@ namespace CityWhispers
             locator.StopListeningAsync();
 
         }
+
         async void Locator_PositionChanged(object sender, PositionEventArgs e)
         {
             var location = e.Position;
@@ -57,6 +59,21 @@ namespace CityWhispers
             await UpdatePins();
 
         }
+
+        //private static void SetTimer()
+        //{
+        //    UpdateMapTimer = new System.Timers.Timer(1000);
+        //    UpdateMapTimer.Elapsed += UpdateDisplayedWhispers;
+        //    UpdateMapTimer.AutoReset = true;
+        //    UpdateMapTimer.Enabled = true;
+        //}
+
+        //async static void UpdateDisplayedWhispers(object sender, System.Timers.ElapsedEventArgs e)
+        //{
+        //    MainPageMap map = new MainPageMap();
+        //    await map.UpdatePins();
+        //}
+
 
         private async System.Threading.Tasks.Task UpdatePins()
         {
@@ -91,6 +108,11 @@ namespace CityWhispers
             {
                 BindingContext = new Whisper()
             });
+
+            //App.Current.MainPage = new CreateWhisper
+            //{
+            //    BindingContext = new Whisper()
+            //};
         }
 
         async void Get_Location()
@@ -105,6 +127,28 @@ namespace CityWhispers
             //Pin whisperPin = (Pin)sender;
             await DisplayAlert(whisper.TimeStamp.ToShortDateString() + "  " + whisper.TimeStamp.ToShortTimeString() +
                                "\n" + whisper.Author, whisper.Text, "Back");
+                               
+            if(whisper.Author != StartupPage.LoggedIn.Username)
+            {
+                var clickedConnection = new ClickedWhisper
+                {
+                    ClickerUsername = StartupPage.LoggedIn.Username,
+                    TimeStampInt = whisper.TimeStampInt
+                };
+
+                var allClickedConnections = await App.Database.GetClickedWhispersAsync();
+                foreach(var connection in allClickedConnections)
+                {
+                    if((connection.ClickerUsername == clickedConnection.ClickerUsername)
+                       && (connection.TimeStampInt == clickedConnection.TimeStampInt))
+                    {
+                        goto here;
+                    }
+                }
+                await App.Database.SaveClickedWhisperAsync(clickedConnection);
+                here:;
+            }
+
             //await Navigation.PushAsync(new WhisperView());
         }
 

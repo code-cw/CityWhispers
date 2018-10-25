@@ -82,7 +82,7 @@ namespace CityWhispers
             {
                 if (e.SelectedItem != null)
                 {
-                    await Navigation.PushAsync(new WhisperView(e.SelectedItem as Whisper)
+                    await Navigation.PushAsync(new WhisperViewRecents(e.SelectedItem as Whisper)
                     {
                         BindingContext = e.SelectedItem as Whisper
                     });
@@ -100,7 +100,22 @@ namespace CityWhispers
 
             // Reset the 'resume' id, since we just want to re-start here
             ((App)App.Current).ResumeAtWhisperId = -1;
-            list.ItemsSource = await App.Database.GetWhispersAsync();
+            var allWhispers = await App.Database.GetWhispersAsync();
+            var ClickedWhispers = new List<Whisper>();
+            var allClickedConnection = await App.Database.GetClickedWhispersAsync();
+            foreach (var whisper in allWhispers)
+            {
+                foreach (var connection in allClickedConnection)
+                {
+                    if ((connection.ClickerUsername == StartupPage.LoggedIn.Username)
+                       && (connection.TimeStampInt == whisper.TimeStampInt))
+                    {
+                        ClickedWhispers.Add(whisper);
+                    }
+                }
+            }
+
+            list.ItemsSource = ClickedWhispers;
         }
 
         protected async void RefreshList()
@@ -108,7 +123,22 @@ namespace CityWhispers
             App.Database.DeleteExpiredWhispersAsync();
 
             ((App)App.Current).ResumeAtWhisperId = -1;
-            list.ItemsSource = await App.Database.GetWhispersAsync();
+            var allWhispers = await App.Database.GetWhispersAsync();
+            var ClickedWhispers = new List<Whisper>();
+            var allClickedConnection = await App.Database.GetClickedWhispersAsync();
+            foreach (var whisper in allWhispers)
+            {
+                foreach (var connection in allClickedConnection)
+                {
+                    if ((connection.ClickerUsername == StartupPage.LoggedIn.Username) 
+                        && (connection.TimeStampInt == whisper.TimeStampInt))
+                    {
+                        ClickedWhispers.Add(whisper);
+                    }
+                }
+            }
+
+            list.ItemsSource = ClickedWhispers;
         }
 
         //async void Whisper_Selected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)

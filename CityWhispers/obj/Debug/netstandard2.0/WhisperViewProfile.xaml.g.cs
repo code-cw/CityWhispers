@@ -8,20 +8,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("CityWhispers.WhisperView.xaml", "WhisperView.xaml", typeof(global::CityWhispers.WhisperView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("CityWhispers.WhisperViewProfile.xaml", "WhisperViewProfile.xaml", typeof(global::CityWhispers.WhisperViewProfile))]
 
 namespace CityWhispers {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("WhisperView.xaml")]
-    public partial class WhisperView : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("WhisperViewProfile.xaml")]
+    public partial class WhisperViewProfile : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Grid grid;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WhisperView));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WhisperViewProfile));
             grid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "grid");
         }
     }

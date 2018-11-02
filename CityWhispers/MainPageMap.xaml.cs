@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Plugin.Geolocator;
-using CityWhispers.Models;
 using System.Diagnostics;
 using Plugin.Geolocator.Abstractions;
 using Position = Xamarin.Forms.Maps.Position;
@@ -15,13 +14,12 @@ namespace CityWhispers
         Map map;
         IGeolocator locator = CrossGeolocator.Current;
         Position currentLocation;
-        //private static System.Timers.Timer UpdateMapTimer;
 
         public MainPageMap()
         {
             InitializeComponent();
             NavigationPage.SetBackButtonTitle(this, "Map");
-            //SetTimer();
+
 
             locator.StartListeningAsync(TimeSpan.FromSeconds(3), 1.0);
             locator.PositionChanged += Locator_PositionChanged;
@@ -37,7 +35,6 @@ namespace CityWhispers
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
 
-            // put the page together
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
  
@@ -56,23 +53,7 @@ namespace CityWhispers
 
             map.MoveToRegion(MapSpan.FromCenterAndRadius(currentLocation, Distance.FromMeters(50)));
             await UpdatePins();
-
         }
-
-        //private static void SetTimer()
-        //{
-        //    UpdateMapTimer = new System.Timers.Timer(1000);
-        //    UpdateMapTimer.Elapsed += UpdateDisplayedWhispers;
-        //    UpdateMapTimer.AutoReset = true;
-        //    UpdateMapTimer.Enabled = true;
-        //}
-
-        //async static void UpdateDisplayedWhispers(object sender, System.Timers.ElapsedEventArgs e)
-        //{
-        //    MainPageMap map = new MainPageMap();
-        //    await map.UpdatePins();
-        //}
-
 
         private async System.Threading.Tasks.Task UpdatePins()
         {
@@ -129,11 +110,6 @@ namespace CityWhispers
             {
                 BindingContext = new Whisper()
             });
-
-            //App.Current.MainPage = new CreateWhisper
-            //{
-            //    BindingContext = new Whisper()
-            //};
         }
 
         async void Get_Location()
@@ -145,7 +121,6 @@ namespace CityWhispers
 
         async void OnPinClicked(object sender, EventArgs e, Whisper whisper)
         {
-            //Pin whisperPin = (Pin)sender;
             await DisplayAlert(whisper.TimeStamp.ToShortDateString() + "  " + whisper.TimeStamp.ToShortTimeString() +
                                "\n" + whisper.Author, whisper.Text, "Back");
                                
@@ -168,8 +143,6 @@ namespace CityWhispers
                 }
                 await App.Database.SaveClickedWhisperAsync(clickedConnection);
             }
-
-            //await Navigation.PushAsync(new WhisperView());
         }
 
         protected override async void OnAppearing()
@@ -182,13 +155,6 @@ namespace CityWhispers
 
         public double DistanceLocations(double lat1, double lon1, double lat2, double lon2)
         {
-            //double theta = lon1 - lon2;
-            //double dist = Math.Sin(Deg2rad(lat1)) * Math.Sin(Deg2rad(lat2)) + Math.Cos(Deg2rad(lat1)) * Math.Cos(Deg2rad(lat2)) * Math.Cos(Deg2rad(theta));
-            //dist = Math.Acos(dist);
-            //dist = Rad2deg(dist);
-            //dist = dist * 1609.344;
-
-            //return (dist);
             double phi = lat2 - lat1;
             double lambda = lon2 - lon1;
             double phi_rad = Deg2rad(phi);
@@ -212,68 +178,4 @@ namespace CityWhispers
             return (rad / Math.PI * 180.0);
         }
     }
-
-    //public static Page GetMainPageMap()
-    //{
-    //    return new ContentPage
-    //    {
-    //        Content = new Map(MapSpan.FromCenterAndRadius(new Position(37, -122), Distance.FromMiles(10)))
-    //    };
-    //}
-
-    //public MainPageMap()
-    //{
-    //Label space = new Label
-    //{
-    //    Text = " ",
-    //    FontSize = 20,
-    //    FontAttributes = FontAttributes.Bold,
-    //    HorizontalOptions = LayoutOptions.Start
-    //};
-
-    //Label header = new Label
-    //{
-    //    Text = "Map",
-    //    FontSize = 40,
-    //    FontAttributes = FontAttributes.Bold,
-    //    HorizontalOptions = LayoutOptions.Start
-    //};
-
-    //Label label1 = new Label
-    //{
-    //    Text = "On this Page the Map will be implementet some time.",
-    //    FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-    //};
-
-    //Label label2 = new Label
-    //{
-    //    Text = "From this Map the user will be able to see Wispers " +
-    //           "nearby and also to post his own Whispers, containing " +
-    //           "text, pictures and one day even videos.",
-    //    FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-    //};
-
-    //Label label3 = new Label
-    //{
-    //    Text = "The Map page will use the native Maps for iOS and " +
-    //           "Android, obviously depending on the OS running on " +
-    //           "the user's Device.",
-    //    FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-    //};
-
-    //// Build the page.
-    //Title = "Map";
-    //Padding = new Thickness(10, 0);
-    //Content = new StackLayout
-    //{
-    //    Children =
-    //    {
-    //        space,
-    //        header,
-    //        label1,
-    //        label2,
-    //        label3
-    //    }
-    //};
-    //}
 }

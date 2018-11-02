@@ -40,13 +40,11 @@ namespace CityWhispers
                 VerticalOptions = LayoutOptions.EndAndExpand
             };
             whisperAddress.SetBinding(Label.TextProperty, "Address");
-            //Get_Address(whisper_Location, whisperAddress);
 
             var whisperPin = new Pin
             {
                 Position = whisper_Location,
                 Label = ""
-                //Type = PinType.SearchResult
             };
             map.Pins.Add(whisperPin);
 
@@ -58,11 +56,9 @@ namespace CityWhispers
             whisperText.SetBinding(Label.TextProperty, "Text");
 
             map.MoveToRegion(MapSpan.FromCenterAndRadius(whisper_Location, Distance.FromMeters(50)));
-            Task.Delay(1000);
             grid.Children.Add(map, 0, 0);
             grid.Children.Add(whisperAddress, 0, 0);
             grid.Children.Add(whisperText, 0, 1);
-            //Content = grid;
 
         }
 
@@ -73,13 +69,5 @@ namespace CityWhispers
 
             await Navigation.PopAsync();
         }
-
-        //async void Get_Address(Position location, Label Address)
-        //{
-        //    var geo = new Xamarin.Forms.Maps.Geocoder();
-        //    var addresses = await geo.GetAddressesForPositionAsync(location);
-        //    foreach (var address in addresses)
-        //        Address.Text = address;
-        //}
     }
 }

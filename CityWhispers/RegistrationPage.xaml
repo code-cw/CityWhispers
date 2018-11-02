@@ -20,7 +20,6 @@
         <DatePicker x:Name="Birthday"></DatePicker>
         <Label x:Name="Address" Text="Address (optional)"></Label>
         <Editor Placeholder="Address"></Editor>
-        <!--<Label Text="Already have account? Sign In" TextColor="Blue"></Label>-->
     </StackLayout>
 
 </ContentPage>

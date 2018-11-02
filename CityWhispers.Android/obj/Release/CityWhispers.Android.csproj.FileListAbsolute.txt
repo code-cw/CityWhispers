@@ -1,0 +1,11 @@
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/CityWhispers.Android.csprojAssemblyReference.cache
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/Xamarin.GooglePlayServices.Basement.dll.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/Xamarin.GooglePlayServices.Tasks.dll.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/Xamarin.GooglePlayServices.Base.dll.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/Xamarin.GooglePlayServices.Maps.dll.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/proguard/dc663e480.txt
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/dc663e48.proguard.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/0757626b.proguard.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/2f4d086a.proguard.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/XbdMerge/ea5c07c4.proguard.stamp
+/Users/Aaron/Projects/CityWhispers/CityWhispers.Android/obj/Release/res.flag

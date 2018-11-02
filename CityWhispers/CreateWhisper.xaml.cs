@@ -49,7 +49,6 @@ namespace CityWhispers
             {
                 Position = whisper_Location,
                 Label = ""
-                //Type = PinType.SearchResult
             };
 
             map.Pins.Add(whisperPin);
@@ -64,17 +63,12 @@ namespace CityWhispers
             };
             editor.SetBinding(Editor.TextProperty, "Text");
 
-            //whisperAddress.SetBinding(Label.TextProperty, "Address");
-
-            //grid.Children.Add(whisperAnonymous, 0, 0);
-            //grid.Children.Add(anonymous, 1, 0);
             grid.Children.Add(map, 0, 0);
             Grid.SetColumnSpan(map, 2);
             grid.Children.Add(whisperAddress, 0, 0);
             Grid.SetColumnSpan(whisperAddress, 2);
             grid.Children.Add(editor, 0, 1);
             Grid.SetColumnSpan(editor, 2);
-            //Content = grid;
         }
 
         async void Send_Whisper(object sender, System.EventArgs e)

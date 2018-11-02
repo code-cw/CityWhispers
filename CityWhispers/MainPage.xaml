@@ -7,24 +7,4 @@
     <local:MainPageRecents />
     <local:MainPageProfile />
     <local:MainPageSettings />
-    <!--<NavigationPage Title="Map" Icon="map_marker@3x.png">
-        <x:Arguments>
-            <local:MainPageMap />
-        </x:Arguments>
-    </NavigationPage>
-    <NavigationPage Title="Recents" Icon="clock@3x.png">
-        <x:Arguments>
-            <local:MainPageRecents />
-        </x:Arguments>
-    </NavigationPage>
-    <NavigationPage Title="Profile" Icon="user_group_man_woman@3x.png">
-        <x:Arguments>
-            <local:MainPageProfile />
-        </x:Arguments>
-    </NavigationPage>
-    <NavigationPage Title="Settings" Icon="settings@3x.png">
-        <x:Arguments>
-            <local:MainPageSettings />
-        </x:Arguments>
-    </NavigationPage>-->
 </TabbedPage>

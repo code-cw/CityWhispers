@@ -1,4 +1,6 @@
-/Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.csprojAssemblyReference.cache
+/Users/Aaron/Projects/CityWhispers/CityWhispers/bin/Debug/netstandard2.0/CityWhispers.deps.json
+/Users/Aaron/Projects/CityWhispers/CityWhispers/bin/Debug/netstandard2.0/CityWhispers.dll
+/Users/Aaron/Projects/CityWhispers/CityWhispers/bin/Debug/netstandard2.0/CityWhispers.pdb
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CreateWhisper.xaml.g.cs
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs
@@ -14,9 +16,6 @@
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.csproj.CoreCompileInputs.cache
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.AssemblyInfoInputs.cache
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.AssemblyInfo.cs
-/Users/Aaron/Projects/CityWhispers/CityWhispers/bin/Debug/netstandard2.0/CityWhispers.deps.json
-/Users/Aaron/Projects/CityWhispers/CityWhispers/bin/Debug/netstandard2.0/CityWhispers.dll
-/Users/Aaron/Projects/CityWhispers/CityWhispers/bin/Debug/netstandard2.0/CityWhispers.pdb
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.dll
 /Users/Aaron/Projects/CityWhispers/CityWhispers/obj/Debug/netstandard2.0/CityWhispers.pdb

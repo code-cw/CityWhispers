@@ -6,13 +6,11 @@
              BackgroundColor="White"
              Title="Profile"
              Icon="user_group_man_woman.png">
+    
     <NavigationPage.ToolbarItems>
         <ToolbarItem Text="Log Out"
                      Priority="1"
                      Clicked="LogOut" />
-        <!--<ToolbarItem Text="Locate"
-                     Priority="0"
-                     Clicked="Relocate" />-->
     </NavigationPage.ToolbarItems>
     <ScrollView>
         <Grid ColumnSpacing="0" RowSpacing="0">
@@ -28,13 +26,9 @@
             <Image Source="BrissyAtNight.JPG"
                    Aspect="AspectFill"/>
             
-        <!--https://images.indianexpress.com/2016/11/hazaribagh-759.jpg-->
- 
         <!-- profile image -->
             <Image Source="user_group_man_woman_ground.jpg"
                    Margin="0,0,0,-50" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End"/>
-            
-        <!--http://fourwinds.com.au/wp-content/uploads/1416428226Image-Placeholder-1416428226-7e2acf81995ad78a094f834d00a.jpg-->
  
         <!-- Profile Name -->
             <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,00">
@@ -67,15 +61,9 @@
            </Grid>
  
        <!-- Own Whispers -->
-        <!--<ScrollView Grid.Row="3">-->
             <ListView x:Name="list" Grid.Row="3">
             </ListView>
-        <!--</ScrollView>-->
-       <!--<ScrollView Grid.Row="3">
-                <Label Margin="20,0" HorizontalTextAlignment="Center" 
-                       Text="Your latest whisper goes here" TextColor="LightGray"/>
-           </ScrollView>-->
- 
+
            <!-- follow button -->
             <Button Clicked="DeleteProfile" Grid.Row="4" Text="Delete Profile" Margin="20" VerticalOptions="End" />
 

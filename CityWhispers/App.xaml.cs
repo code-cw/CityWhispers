@@ -11,15 +11,12 @@ namespace CityWhispers
     public partial class App : Application
     {
         static CityWhispersDatabase database;
-        //static ProfileDatabase P_database;
-        //static CurrentlyProfileStore L_database;
 
         private static System.Timers.Timer LifetimeTimer;
 
         public App()
         {
             InitializeComponent();
-            //FormsMaps.Init("AUTHENTICATION_TOKEN");
             SetTimer();
             MainPage = new StartupPage();
         }
@@ -55,17 +52,6 @@ namespace CityWhispers
             Database.DeleteExpiredWhispersAsync();
         }
 
-        //public static Profile GetCurrentlyLoggedIn()
-        //{
-        //    Profile CurrentlyLoggedIn = new Profile
-        //    {
-        //        Email = "person@provider.com.au",
-        //        Username = "WhisperGuy94",
-        //        Password = "Test",
-        //        //DateOfBirth = "5/3/1992"
-        //    };
-        //    return CurrentlyLoggedIn;
-        //}
 
         protected override void OnStart()
         {

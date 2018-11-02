@@ -9,20 +9,5 @@
                      Text="+"
                      Priority="1"
                      Clicked="To_Add_Whisper" />
-        <!--<ToolbarItem Text="Locate"
-                     Priority="0"
-                     Clicked="Relocate" />-->
     </NavigationPage.ToolbarItems>
-    <ContentPage.Content>
-        <!--<StackLayout>
-            <Label x:Name="Lat" 
-                   Text="{Binding Source=lat}" />
-            <Label x:Name="Long"
-                   Text="{Binding Source=lon}"/>
-        </StackLayout>-->
-    </ContentPage.Content>
-    <!--<NavigationPage.ToolbarItems>
-        <ToolbarItem Text="Done" Clicked="Create_Whisper" />
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Whisper" />
-    </NavigationPage.ToolbarItems>-->
 </ContentPage>

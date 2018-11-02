@@ -5,6 +5,4 @@
              xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
              Title="Recents"
              Icon="clock.png">
-    <ContentPage.Content>
-    </ContentPage.Content>
 </ContentPage>

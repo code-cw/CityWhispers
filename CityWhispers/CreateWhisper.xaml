@@ -6,20 +6,25 @@
         <ToolbarItem Text="Whisper!"
                      Clicked="Send_Whisper" />
     </NavigationPage.ToolbarItems>
-    <ContentPage.Content>
-        <!--<ScrollView>-->
-            <Grid x:Name="grid">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="0.01*" />
-                    <RowDefinition Height="2.99*" />
-                </Grid.RowDefinitions>
-            </Grid>
-        <!--</ScrollView>-->
-    </ContentPage.Content>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Fill">
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="StartAndExpand"
+                   Margin="10"
+                   Text="Whisper anonymous">
+            </Label>
+            <Switch Margin="10"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"
+                    x:Name="anonymous">
+            </Switch>
+        </StackLayout>
+        <Grid x:Name="grid" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+        </Grid>
+    </StackLayout>
 </ContentPage>

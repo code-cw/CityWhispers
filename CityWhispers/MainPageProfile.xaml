@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CityWhispers"
-             x:Class="CityWhispers.MainPageProfile" BackgroundColor="White">
+             x:Class="CityWhispers.MainPageProfile"
+             BackgroundColor="White"
+             Title="Profile"
+             Icon="user_group_man_woman.png">
     <NavigationPage.ToolbarItems>
         <ToolbarItem Text="Log Out"
                      Priority="1"
@@ -22,13 +25,16 @@
             </Grid.RowDefinitions>
  
         <!-- header background -->
-            <Image Source="https://images.indianexpress.com/2016/11/hazaribagh-759.jpg"
+            <Image Source="BrissyAtNight.JPG"
                    Aspect="AspectFill"/>
             
+        <!--https://images.indianexpress.com/2016/11/hazaribagh-759.jpg-->
  
         <!-- profile image -->
-            <Image Source="http://fourwinds.com.au/wp-content/uploads/1416428226Image-Placeholder-1416428226-7e2acf81995ad78a094f834d00a.jpg"
+            <Image Source="user_group_man_woman_ground.jpg"
                    Margin="0,0,0,-50" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End"/>
+            
+        <!--http://fourwinds.com.au/wp-content/uploads/1416428226Image-Placeholder-1416428226-7e2acf81995ad78a094f834d00a.jpg-->
  
         <!-- Profile Name -->
             <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,00">
@@ -46,17 +52,17 @@
  
                 <StackLayout>
                     <Label Text="23" HorizontalTextAlignment="Center"/>
-                    <Button Text="Followed" BorderWidth="7" FontSize="Micro" BackgroundColor="White"/>
+                    <Button Text="Followed" BorderWidth="7" BorderColor="Gray" FontSize="Micro" BackgroundColor="White"/>
                 </StackLayout>
  
             <StackLayout Grid.Column="1">
                     <Label x:Name="NumberOfWhispers" HorizontalTextAlignment="Center"/>
-                    <Button Text="Whispers" BorderWidth="7" FontSize="Micro" BackgroundColor="White"/>
+                    <Button Text="Whispers" BorderWidth="7" BorderColor="Gray" FontSize="Micro" BackgroundColor="White"/>
         </StackLayout>
  
             <StackLayout Grid.Column="2">
                     <Label Text="15" HorizontalTextAlignment="Center"/>
-                    <Button Text="Faves" BorderWidth="7" FontSize="Micro" BackgroundColor="White"/>
+                    <Button Text="Faves" BorderWidth="7" BorderColor="Gray" FontSize="Micro" BackgroundColor="White"/>
         </StackLayout>
            </Grid>
  

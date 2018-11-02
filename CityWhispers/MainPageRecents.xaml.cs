@@ -15,7 +15,7 @@ namespace CityWhispers
         public MainPageRecents()
         {
             InitializeComponent();
-            
+            NavigationPage.SetBackButtonTitle(this, "Recents");
 
             list = new ListView
             {

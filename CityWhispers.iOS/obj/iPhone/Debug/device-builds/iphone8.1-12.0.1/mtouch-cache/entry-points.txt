@@ -1,0 +1,29 @@
+Function=xamarin_timezone_get_data
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_start_wwan
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/System.dll
+Function=CreateZStream
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/System.dll
+Function=CloseZStream
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/System.dll
+Function=Flush
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/System.dll
+Function=ReadZStream
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/System.dll
+Function=WriteZStream
+	/Users/Aaron/Projects/CityWhispers/CityWhispers.iOS/obj/iPhone/Debug/device-builds/iphone8.1-12.0.1/mtouch-cache/1-Link/System.dll
+Function=mono_pmip

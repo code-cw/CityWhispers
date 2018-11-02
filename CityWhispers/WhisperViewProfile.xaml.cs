@@ -53,6 +53,7 @@ namespace CityWhispers
             var whisperText = new Label
             {
                 Margin = new Thickness(10),
+                VerticalOptions = LayoutOptions.StartAndExpand
             };
             whisperText.SetBinding(Label.TextProperty, "Text");
 
@@ -60,8 +61,8 @@ namespace CityWhispers
             Task.Delay(1000);
             grid.Children.Add(map, 0, 0);
             grid.Children.Add(whisperAddress, 0, 0);
-            grid.Children.Add(whisperText, 0, 2);
-            Content = grid;
+            grid.Children.Add(whisperText, 0, 1);
+            //Content = grid;
 
         }
 

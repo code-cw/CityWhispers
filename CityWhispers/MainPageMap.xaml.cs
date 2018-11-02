@@ -20,8 +20,7 @@ namespace CityWhispers
         public MainPageMap()
         {
             InitializeComponent();
-            Title = "Map";
-
+            NavigationPage.SetBackButtonTitle(this, "Map");
             //SetTimer();
 
             locator.StartListeningAsync(TimeSpan.FromSeconds(3), 1.0);
@@ -78,7 +77,25 @@ namespace CityWhispers
         private async System.Threading.Tasks.Task UpdatePins()
         {
             var whispersNearby = await App.Database.GetWhispersAsync();
-            map.Pins.Clear();
+
+            int i = 0;
+            int[] indexToRemove = new int[map.Pins.Count];
+            foreach (var currentPin in map.Pins)
+            {
+                var distance = DistanceLocations(currentPin.Position.Latitude, currentPin.Position.Longitude, currentLocation.Latitude,
+                                                 currentLocation.Longitude);
+                if (distance > 25)
+                {
+                    indexToRemove[i] = map.Pins.IndexOf(currentPin);
+                    i++;
+                }
+            }
+
+            for (int j = 0; j < i; j++)
+            {
+                map.Pins.RemoveAt(indexToRemove[j]);
+            }
+
             foreach (var whisper in whispersNearby)
             {
                 var distance = DistanceLocations(whisper.Latitude, whisper.Longitude,currentLocation.Latitude,
@@ -97,7 +114,11 @@ namespace CityWhispers
                         OnPinClicked(sender, e, whisper);
                     };
 
-                    map.Pins.Add(whisperPin);
+                    if(!map.Pins.Contains(whisperPin))
+                    {
+                        map.Pins.Add(whisperPin);
+                    }
+
                 }
             }
         }
@@ -142,11 +163,10 @@ namespace CityWhispers
                     if((connection.ClickerUsername == clickedConnection.ClickerUsername)
                        && (connection.TimeStampInt == clickedConnection.TimeStampInt))
                     {
-                        goto here;
+                        return;
                     }
                 }
                 await App.Database.SaveClickedWhisperAsync(clickedConnection);
-                here:;
             }
 
             //await Navigation.PushAsync(new WhisperView());
@@ -156,6 +176,7 @@ namespace CityWhispers
         {
             base.OnAppearing();
 
+            map.Pins.Clear();
             await UpdatePins();
         }
 

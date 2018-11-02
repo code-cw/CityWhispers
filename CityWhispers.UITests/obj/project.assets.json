@@ -1099,12 +1099,6 @@
         }
       }
     },
-    "dependencies": {
-      "Xamarin.Forms.Maps": {
-        "target": "Package",
-        "version": "[3.3.0.912540, )"
-      }
-    },
     "frameworks": {
       "net47": {
         "dependencies": {
@@ -1115,6 +1109,10 @@
           "Xamarin.UITest": {
             "target": "Package",
             "version": "2.2.6"
+          },
+          "Xamarin.Forms.Maps": {
+            "target": "Package",
+            "version": "3.3.0.912540"
           },
           "Xam.Plugin.Geolocator": {
             "target": "Package",

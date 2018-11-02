@@ -16,7 +16,7 @@ namespace CityWhispers
         Label whisperAddress = new Label
         {
             Margin = new Thickness(10),
-            FontSize = 15,
+            FontSize = 12,
             HorizontalTextAlignment = TextAlignment.End,
             HorizontalOptions = LayoutOptions.EndAndExpand,
             VerticalOptions = LayoutOptions.EndAndExpand
@@ -25,22 +25,10 @@ namespace CityWhispers
         public CreateWhisper()
         {
             InitializeComponent();
+            NavigationPage.SetBackButtonTitle(this, "Map");
 
             Get_Location();
 
-            Label whisperAnonymous = new Label
-            {
-                Margin = new Thickness(10),
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-                Text = "Anonymous Whisper"
-            };
-
-            Switch anonymous = new Switch
-            {
-                Margin = new Thickness(10),
-                HorizontalOptions = LayoutOptions.End,
-                VerticalOptions = LayoutOptions.CenterAndExpand
-            };
             anonymous.SetBinding(Switch.IsToggledProperty, "Anonymous");
 
             Map map;
@@ -71,21 +59,22 @@ namespace CityWhispers
                 Margin = new Thickness(10),
                 Placeholder = "Type in your Whisper here :)",
                 Keyboard = Keyboard.Chat,
-                MaxLength = 500
+                MaxLength = 500,
+                VerticalOptions = LayoutOptions.FillAndExpand
             };
             editor.SetBinding(Editor.TextProperty, "Text");
 
             //whisperAddress.SetBinding(Label.TextProperty, "Address");
 
-            grid.Children.Add(whisperAnonymous, 0, 0);
-            grid.Children.Add(anonymous, 1, 0);
-            grid.Children.Add(map, 0, 1);
+            //grid.Children.Add(whisperAnonymous, 0, 0);
+            //grid.Children.Add(anonymous, 1, 0);
+            grid.Children.Add(map, 0, 0);
             Grid.SetColumnSpan(map, 2);
-            grid.Children.Add(whisperAddress, 0, 1);
+            grid.Children.Add(whisperAddress, 0, 0);
             Grid.SetColumnSpan(whisperAddress, 2);
-            grid.Children.Add(editor, 0, 3);
+            grid.Children.Add(editor, 0, 1);
             Grid.SetColumnSpan(editor, 2);
-            Content = grid;
+            //Content = grid;
         }
 
         async void Send_Whisper(object sender, System.EventArgs e)

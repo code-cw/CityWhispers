@@ -55,17 +55,17 @@ namespace CityWhispers
             Database.DeleteExpiredWhispersAsync();
         }
 
-        public static Profile GetCurrentlyLoggedIn()
-        {
-            Profile CurrentlyLoggedIn = new Profile
-            {
-                Email = "person@provider.com.au",
-                Username = "WhisperGuy94",
-                Password = "Test",
-                //DateOfBirth = "5/3/1992"
-            };
-            return CurrentlyLoggedIn;
-        }
+        //public static Profile GetCurrentlyLoggedIn()
+        //{
+        //    Profile CurrentlyLoggedIn = new Profile
+        //    {
+        //        Email = "person@provider.com.au",
+        //        Username = "WhisperGuy94",
+        //        Password = "Test",
+        //        //DateOfBirth = "5/3/1992"
+        //    };
+        //    return CurrentlyLoggedIn;
+        //}
 
         protected override void OnStart()
         {

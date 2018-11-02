@@ -6,15 +6,12 @@
         <ToolbarItem Text="Delete"
                      Clicked="Delete_Whisper" />
     </NavigationPage.ToolbarItems>
-    <ContentPage.Content>
         <ScrollView>
-            <Grid x:Name="grid">
+            <Grid x:Name="grid" VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="0.01*" />
-                    <RowDefinition Height="2.99*" />
+                    <RowDefinition Height="3*" />
                 </Grid.RowDefinitions>
             </Grid>
         </ScrollView>
-    </ContentPage.Content>
 </ContentPage>

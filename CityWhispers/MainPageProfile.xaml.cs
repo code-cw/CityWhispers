@@ -14,7 +14,7 @@ namespace CityWhispers
         public MainPageProfile()
         {
             InitializeComponent();
-            Title = "Profile";
+            NavigationPage.SetBackButtonTitle(this, "Profile");
 
             Username.Text = StartupPage.LoggedIn.Username;
 
@@ -75,9 +75,9 @@ namespace CityWhispers
 
         async void DeleteProfile(object sender, System.EventArgs e)
         {
-            var answer = await DisplayAlert("Warning", "Deleting your profile cannot be undone. You won't be able" +
-                               "to whisper or to see other users' Whispers anymore. Your Whispers will stay" +
-                               "visible for other users until their lifetime is over which for each is five days after" +
+            var answer = await DisplayAlert("Warning", "Deleting your profile cannot be undone. You won't be able " +
+                               "to whisper or to see other users' Whispers anymore. Your Whispers will stay " +
+                               "visible for other users until their lifetime is over which for each is five days after " +
                                "you posted it. Do you really whish to delete your profile?", "No", "Delete");
 
             if(answer == false)

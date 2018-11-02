@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CityWhispers.MainPageMap"
-             Icon="Icons/map_marker@3x.png">
+             Title="Map"
+             Icon="map_marker.png">
     <NavigationPage.ToolbarItems>
         <ToolbarItem Name="AddWhisper"
                      Text="+"

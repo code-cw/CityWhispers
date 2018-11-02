@@ -1,15 +1,20 @@
-﻿<Properties StartupConfiguration="{4CF5B4BB-96AC-4167-B757-D85EE61523A5}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{D9D43F37-5C8E-4490-B3C5-DB022B01670A}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.CityWhispers.Android PreferredExecutionTarget="Android.google_pixel" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageProfile.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityWhispers/MainPageProfile.xaml.cs">
     <Files>
-      <File FileName="CityWhispers/App.xaml.cs" Line="6" Column="19" />
-      <File FileName="CityWhispers/MainPageProfile.xaml" Line="67" Column="29" />
-      <File FileName="CityWhispers/MainPageProfile.xaml.cs" Line="115" Column="14" />
-      <File FileName="CityWhispers/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="CityWhispers/LoginPage.xaml.cs" Line="68" Column="57" />
+      <File FileName="CityWhispers/App.xaml.cs" Line="55" Column="51" />
+      <File FileName="CityWhispers/MainPageMap.xaml.cs" Line="34" Column="38" />
+      <File FileName="CityWhispers/MainPageProfile.xaml" Line="23" Column="41" />
+      <File FileName="CityWhispers.Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="CityWhispers/LoginPage.xaml.cs" Line="23" Column="62" />
+      <File FileName="CityWhispers/MainPageRecents.xaml" Line="11" Column="1" />
+      <File FileName="CityWhispers/MainPageSettings.xaml" Line="11" Column="1" />
+      <File FileName="CityWhispers/MainPageMap.xaml" Line="29" Column="1" />
+      <File FileName="CityWhispers/WhisperViewProfile.xaml.cs" Line="72" Column="61" />
+      <File FileName="CityWhispers/MainPageProfile.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -18,7 +23,7 @@
     <Watch file="../../../CityWhispers/WhisperView.xaml.cs" line="62" offsetX="401" offsetY="718" expression="map" liveUpdate="False" />
     <Watch file="../../../CityWhispers/WhisperView.xaml.cs" line="62" offsetX="356" offsetY="788" expression="map" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.700F690C-8650-4852-9FE8-EA78B870FA87" />
+  <MonoDevelop.Ide.ItemProperties.CityWhispers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.bc6871f2c3b3f5f2ebd302ae58c57cf254b30182" automaticSigning="False" />
   <MonoDevelop.Ide.ItemProperties.CityWhispers.UITests PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>

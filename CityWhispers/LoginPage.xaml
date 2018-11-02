@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CityWhispers.LoginPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="10">
             <BoxView HeightRequest="10"/>
             <Frame BackgroundColor="White" HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
@@ -17,12 +17,15 @@
                            TextColor="Black"/>
                 </StackLayout>
             </Frame>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Save Password"></Label>
-                <Switch x:Name="SavePassword" IsToggled="False"></Switch>
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Label Text="Save Password" HorizontalOptions="StartAndExpand"
+                       Margin="10" VerticalOptions="CenterAndExpand"></Label>
+                <Switch x:Name="SavePassword" IsToggled="False"
+                        HorizontalOptions="EndAndExpand" Margin="10"></Switch>
             </StackLayout>
             <Button Text="Login" Clicked="LogIn"
-                    HorizontalOptions="FillAndExpand"/>
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Medium"/>
         </StackLayout>
     </ContentPage.Content>
     <NavigationPage.ToolbarItems>

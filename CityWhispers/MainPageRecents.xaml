@@ -4,7 +4,7 @@
              x:Class="CityWhispers.MainPageRecents"
              xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
              Title="Recents"
-             Icon="Icons/clock@3x.png">
+             Icon="clock.png">
     <ContentPage.Content>
     </ContentPage.Content>
 </ContentPage>

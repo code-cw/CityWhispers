@@ -51,7 +51,7 @@ namespace CityWhispers
                 }
                 if (Email.Text == profile.Email)
                 {
-                    await DisplayAlert("Error", "There already exists an account with this email address. Please recheck" +
+                    await DisplayAlert("Error", "There already exists an account with this email address. Please recheck " +
                                        "spelling or try a different email address", "OK");
                     goto here;
                 }

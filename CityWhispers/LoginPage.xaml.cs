@@ -20,6 +20,7 @@ namespace CityWhispers
             //vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid login credentials. Please try " +
                                //"again or create a new profile", "OK");
             InitializeComponent();
+            NavigationPage.SetBackButtonTitle(this, "Login");
             Title = "Login";
 
             Email.Completed += (object sender, EventArgs e) =>
@@ -68,6 +69,7 @@ namespace CityWhispers
                         StartupPage.LoggedIn = loggedIn;
                     }
                     App.Current.MainPage = new NavigationPage(new MainPage());
+                    return;
                 } 
             }
             Email.Text = null;

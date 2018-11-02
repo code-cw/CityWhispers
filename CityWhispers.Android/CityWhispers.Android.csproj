@@ -107,10 +107,25 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\BrissyAtNight.JPG" />
+    <AndroidResource Include="Resources\drawable\user_group_man_woman_ground.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\map_marker.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\user_group_man_woman.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\user_male.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\map_marker.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\user_group_man_woman.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\user_male.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\map_marker.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\user_group_man_woman.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\user_male.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />

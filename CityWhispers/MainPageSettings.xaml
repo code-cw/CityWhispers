@@ -4,7 +4,7 @@
              x:Class="CityWhispers.MainPageSettings"
              xmlns:local="clr-namespace:CityWhispers;assembly=CityWhispers"
              Title="Settings"
-             Icon="Icons/settings@3x.png">
+             Icon="settings.png">
     <ContentPage.Content>
     </ContentPage.Content>
 </ContentPage>
